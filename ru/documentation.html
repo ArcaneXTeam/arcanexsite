@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документация — экзекьютор скриптов Roblox ArcaneX</title>
+    <meta name="description" content="Полная документация ArcaneX: установка, подключение к Roblox, запуск Lua-скриптов, использование Script Hub и решение типичных проблем.">
+    <meta name="keywords" content="документация arcanex, гайд по roblox executor, как пользоваться экзекьютором, lua executor туториал">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Документация ArcaneX">
+    <meta property="og:description" content="Установка, attach и запуск Lua-скриптов в экзекьюторе ArcaneX.">
+    <meta property="og:url" content="https://arcanexecutor.com/ru/documentation.html">
+    <link rel="icon" href="https://arcanexecutor.com/icons8-удар-молнии-100.png" type="image/png">
+    <meta property="og:image" content="https://arcanexecutor.com/hub.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://arcanexecutor.com/hub.png">
+    <link rel="canonical" href="https://arcanexecutor.com/ru/documentation.html">
+    <link rel="alternate" hreflang="en" href="https://arcanexecutor.com/documentation.html">
+    <link rel="alternate" hreflang="ru" href="https://arcanexecutor.com/ru/documentation.html">
+    <link rel="alternate" hreflang="x-default" href="https://arcanexecutor.com/documentation.html">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .page-container { padding: 6rem 2rem 3rem; max-width: 1000px; margin: 0 auto; }
+        .page-title { font-size: 2.5rem; margin-bottom: 0.5rem; text-align: center; }
+        .page-subtitle { font-size: 1.1rem; color: var(--text-secondary); text-align: center; margin-bottom: 2rem; }
+        .doc-section { background: rgba(20, 20, 20, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; }
+        .doc-section h2 { font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.75rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.5rem; }
+        .doc-section h3 { font-size: 1.15rem; color: var(--text-primary); margin-top: 1rem; margin-bottom: 0.5rem; }
+        .doc-section p { color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.5rem; }
+        .doc-section ul { color: var(--text-secondary); line-height: 1.6; margin-left: 1.5rem; margin-bottom: 0.5rem; }
+        .doc-section code { background: rgba(0, 0, 0, 0.5); padding: 0.2rem 0.5rem; border-radius: 4px; color: #ffffff; font-family: 'Courier New', monospace; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); text-decoration: none; margin-bottom: 1.5rem; transition: color 0.3s ease; }
+        .back-link:hover { color: var(--text-primary); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <span class="logo-text">ARCANEX</span>
+                <span class="logo-glow"></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="download.html" class="nav-link">Скачать</a>
+                <a href="about.html" class="nav-link">О программе</a>
+                <a href="questions.html" class="nav-link">Вопросы</a>
+                <a href="documentation.html" class="nav-link active">Документация</a>
+                <a href="status.html" class="nav-link">Статус</a>
+                <a href="support.html" class="nav-link">Поддержка</a>
+                <a href="utilities.html" class="nav-link nav-link-accent">Roblox Unlocker</a>
+                <div class="lang-switcher">
+                    <button class="lang-button" type="button" aria-haspopup="true" aria-expanded="false">Язык</button>
+                    <div class="lang-menu" role="menu">
+                        <a href="../documentation.html" class="lang-option" hreflang="en" role="menuitem">English<span class="lang-option-code">EN</span></a>
+                        <a href="documentation.html" class="lang-option active" hreflang="ru" role="menuitem">Русский<span class="lang-option-code">RU</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <a href="index.html" class="back-link">← На главную</a>
+
+        <h1 class="page-title"><span class="gradient-text">Документация</span></h1>
+        <p class="page-subtitle">Полное руководство по ArcaneX</p>
+
+        <div class="doc-section">
+            <h2>Начало работы</h2>
+            <h3>Установка</h3>
+            <p>Чтобы установить ArcaneX:</p>
+            <ul>
+                <li>Скачайте последнюю версию с главной страницы</li>
+                <li>Распакуйте ZIP в выбранную папку</li>
+                <li>Запустите <code>ArcaneX.exe</code> от имени администратора</li>
+            </ul>
+
+            <h3>Первый запуск</h3>
+            <p>При первом запуске вы увидите главный интерфейс:</p>
+            <ul>
+                <li>Редактор скриптов с подсветкой синтаксиса</li>
+                <li>Кнопка Execute для запуска скриптов</li>
+                <li>Script Hub с готовыми скриптами</li>
+                <li>Панель настроек</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>Основы</h2>
+            <h3>Подключение к Roblox</h3>
+            <p>ArcaneX использует автоматический attach. Просто:</p>
+            <ul>
+                <li>Запустите Roblox и войдите в любую игру</li>
+                <li>Откройте ArcaneX — он сам обнаружит процесс и подключится</li>
+                <li>Дождитесь индикатора «Attached»</li>
+            </ul>
+
+            <h3>Запуск скриптов</h3>
+            <p>Чтобы запустить скрипт:</p>
+            <ul>
+                <li>Вставьте или напишите Lua-скрипт в редакторе</li>
+                <li>Нажмите Execute или <code>Ctrl+Enter</code></li>
+                <li>Скрипт выполнится в игре мгновенно</li>
+            </ul>
+
+            <h3>Использование Script Hub</h3>
+            <p>Доступ к проверенным скриптам:</p>
+            <ul>
+                <li>Откройте вкладку Script Hub</li>
+                <li>Просматривайте скрипты по категориям</li>
+                <li>Кликните по любому скрипту — он загрузится в редактор</li>
+                <li>Запустите как обычно</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>Расширенные возможности</h2>
+            <h3>Сохранение и загрузка</h3>
+            <p>Работа с любимыми скриптами:</p>
+            <ul>
+                <li>Кнопка Save — сохранить текущий скрипт</li>
+                <li>Задайте удобное имя</li>
+                <li>Открывайте сохранённые на вкладке Saved</li>
+                <li>Загружайте в один клик</li>
+            </ul>
+
+            <h3>Autoexec</h3>
+            <p>Скрипты, которые запускаются автоматически при входе в игру:</p>
+            <ul>
+                <li>Сохраните скрипт в папку <code>autoexec</code></li>
+                <li>Все файлы из неё запустятся сразу после attach</li>
+                <li>Идеально для универсальных скриптов вроде Infinite Yield</li>
+            </ul>
+
+            <h3>Настройки</h3>
+            <p>Персонализация:</p>
+            <ul>
+                <li>Тема редактора (тёмная/светлая)</li>
+                <li>Размер шрифта</li>
+                <li>Подсветка синтаксиса</li>
+                <li>Настройка горячих клавиш</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>Решение проблем</h2>
+            <h3>ArcaneX не подключается</h3>
+            <ul>
+                <li>Запустите Roblox до открытия ArcaneX</li>
+                <li>Запустите ArcaneX от имени администратора</li>
+                <li>Перезапустите Roblox и ArcaneX</li>
+            </ul>
+
+            <h3>Скрипты не выполняются</h3>
+            <ul>
+                <li>Проверьте совместимость скрипта с текущей игрой</li>
+                <li>Проверьте синтаксис</li>
+                <li>Убедитесь, что attach прошёл</li>
+                <li>Попробуйте тестовый <code>print("test")</code></li>
+            </ul>
+
+            <h3>Зависания и сбои</h3>
+            <ul>
+                <li>Обновите ArcaneX до последней версии</li>
+                <li>Очистите папку cache в директории ArcaneX</li>
+                <li>Не запускайте несколько экзекьюторов одновременно</li>
+                <li>Проверьте минимальные системные требования</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ARCANEX</span>
+                    <p class="footer-text">Roblox экзекьютор скриптов и Lua-рантайм</p>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-text">© 2026 ArcaneX. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

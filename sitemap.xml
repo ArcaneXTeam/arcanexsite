@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url><loc>https://arcanexecutor.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcanexecutor.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arcanexecutor.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcanexecutor.com/"/>
+    <changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://arcanexecutor.com/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcanexecutor.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arcanexecutor.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcanexecutor.com/"/>
+    <changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <url><loc>https://arcanexecutor.com/download.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcanexecutor.com/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arcanexecutor.com/ru/download.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcanexecutor.com/download.html"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://arcanexecutor.com/ru/download.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcanexecutor.com/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arcanexecutor.com/ru/download.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcanexecutor.com/download.html"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <url><loc>https://arcanexecutor.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://arcanexecutor.com/ru/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://arcanexecutor.com/utilities.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://arcanexecutor.com/ru/utilities.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://arcanexecutor.com/questions.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://arcanexecutor.com/ru/questions.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://arcanexecutor.com/documentation.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://arcanexecutor.com/ru/documentation.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://arcanexecutor.com/status.html</loc><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://arcanexecutor.com/ru/status.html</loc><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://arcanexecutor.com/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://arcanexecutor.com/ru/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>

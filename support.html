@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — ArcaneX Roblox Executor Help &amp; Contact</title>
+    <meta name="description" content="Get help with ArcaneX, a Roblox script executor and Lua runtime: documentation, FAQ and contact form.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Support — ArcaneX">
+    <meta property="og:description" content="Help center and contact form for ArcaneX users.">
+    <meta property="og:url" content="https://arcanexecutor.com/support.html">
+    <link rel="icon" href="https://arcanexecutor.com/icons8-удар-молнии-100.png" type="image/png">
+    <meta property="og:image" content="https://arcanexecutor.com/hub.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://arcanexecutor.com/hub.png">
+    <link rel="canonical" href="https://arcanexecutor.com/support.html">
+    <link rel="alternate" hreflang="en" href="https://arcanexecutor.com/support.html">
+    <link rel="alternate" hreflang="ru" href="https://arcanexecutor.com/ru/support.html">
+    <link rel="alternate" hreflang="x-default" href="https://arcanexecutor.com/support.html">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-container {
+            padding: 6rem 2rem 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .support-card {
+            background: rgba(20, 20, 20, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .support-card:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .support-icon {
+            margin-bottom: 0.75rem;
+            color: var(--accent-steel);
+            display: flex;
+            justify-content: center;
+        }
+
+        .support-icon svg {
+            width: 42px;
+            height: 42px;
+        }
+
+        .support-card:hover .support-icon {
+            color: var(--text-primary);
+        }
+
+        .support-card h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .support-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .support-card .btn {
+            width: 100%;
+        }
+
+        .contact-form {
+            background: rgba(20, 20, 20, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .contact-form h2 {
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <span class="logo-text">ARCANEX</span>
+                <span class="logo-glow"></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="download.html" class="nav-link">Download</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="questions.html" class="nav-link">Questions</a>
+                <a href="documentation.html" class="nav-link">Documentation</a>
+                <a href="status.html" class="nav-link">Status</a>
+                <a href="support.html" class="nav-link active">Support</a>
+                <a href="utilities.html" class="nav-link nav-link-accent">Roblox Unlocker</a>
+                <div class="lang-switcher">
+                    <button class="lang-button" type="button" aria-haspopup="true" aria-expanded="false">Language</button>
+                    <div class="lang-menu" role="menu">
+                        <a href="support.html" class="lang-option active" hreflang="en" role="menuitem">English<span class="lang-option-code">EN</span></a>
+                        <a href="ru/support.html" class="lang-option" hreflang="ru" role="menuitem">Русский<span class="lang-option-code">RU</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <h1 class="page-title">
+            <span class="gradient-text">Support Center</span>
+        </h1>
+        <p class="page-subtitle">Get help from our team</p>
+
+        <div class="support-grid">
+            <div class="support-card">
+                <div class="support-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                </div>
+                <h3>Documentation</h3>
+                <p>Browse our comprehensive guides and tutorials</p>
+                <a href="documentation.html" class="btn btn-secondary">
+                    <span class="btn-text">View Docs</span>
+                </a>
+            </div>
+
+            <div class="support-card">
+                <div class="support-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                </div>
+                <h3>FAQ</h3>
+                <p>Find answers to frequently asked questions</p>
+                <a href="questions.html" class="btn btn-secondary">
+                    <span class="btn-text">View FAQ</span>
+                </a>
+            </div>
+
+            <div class="support-card">
+                <div class="support-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h3>Service Status</h3>
+                <p>Check the current status of our services</p>
+                <a href="status.html" class="btn btn-secondary">
+                    <span class="btn-text">View Status</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Describe your issue or question..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-icon">→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ARCANEX</span>
+                    <p class="footer-text">Roblox Script Executor &amp; Lua Runtime</p>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-text">© 2026 ArcaneX. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

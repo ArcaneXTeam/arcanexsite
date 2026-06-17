@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Roblox Executor Questions | ArcaneX</title>
+    <meta name="description" content="Answers to common questions about ArcaneX, a Roblox script executor and Lua runtime: what is a roblox executor, injector vs executor, installation, compatibility, updates.">
+    <meta name="keywords" content="what is roblox executor, roblox injector vs executor, arcanex faq, roblox script executor questions">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FAQ — ArcaneX Roblox Executor">
+    <meta property="og:description" content="Common questions about the ArcaneX Roblox script executor.">
+    <meta property="og:url" content="https://arcanexecutor.com/questions.html">
+    <link rel="icon" href="https://arcanexecutor.com/icons8-удар-молнии-100.png" type="image/png">
+    <meta property="og:image" content="https://arcanexecutor.com/hub.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://arcanexecutor.com/hub.png">
+    <link rel="canonical" href="https://arcanexecutor.com/questions.html">
+    <link rel="alternate" hreflang="en" href="https://arcanexecutor.com/questions.html">
+    <link rel="alternate" hreflang="ru" href="https://arcanexecutor.com/ru/questions.html">
+    <link rel="alternate" hreflang="x-default" href="https://arcanexecutor.com/questions.html">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-container {
+            padding: 6rem 2rem 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            background: rgba(20, 20, 20, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <span class="logo-text">ARCANEX</span>
+                <span class="logo-glow"></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="download.html" class="nav-link">Download</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="questions.html" class="nav-link active">Questions</a>
+                <a href="documentation.html" class="nav-link">Documentation</a>
+                <a href="status.html" class="nav-link">Status</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="utilities.html" class="nav-link nav-link-accent">Roblox Unlocker</a>
+                <div class="lang-switcher">
+                    <button class="lang-button" type="button" aria-haspopup="true" aria-expanded="false">Language</button>
+                    <div class="lang-menu" role="menu">
+                        <a href="questions.html" class="lang-option active" hreflang="en" role="menuitem">English<span class="lang-option-code">EN</span></a>
+                        <a href="ru/questions.html" class="lang-option" hreflang="ru" role="menuitem">Русский<span class="lang-option-code">RU</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <h1 class="page-title">
+            <span class="gradient-text">Frequently Asked Questions</span>
+        </h1>
+        <p class="page-subtitle">Find answers to common questions about ArcaneX</p>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What is a Roblox executor?</h3>
+            <p class="faq-answer">A Roblox executor (sometimes called a roblox injector or lua executor) is a desktop application that runs custom Lua scripts in a Roblox session. Developers use them to automate gameplay, prototype game ideas and learn Lua. ArcaneX is one such executor, focused on a fast attach engine and a clean editor.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What is the difference between a Roblox injector and an executor?</h3>
+            <p class="faq-answer">In community jargon the terms are used almost interchangeably. Strictly speaking, an injector is the component that attaches to the Roblox process, while the executor is the Lua runtime that runs your scripts. Most modern tools — including ArcaneX — bundle both in one application.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Is ArcaneX really free?</h3>
+            <p class="faq-answer">Yes. ArcaneX is free to download and use — no hidden fees, no subscriptions, no key system, no ads.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What operating systems does ArcaneX support?</h3>
+            <p class="faq-answer">ArcaneX currently supports Windows 10 and Windows 11 (64-bit). Make sure your system has the latest updates and a recent version of the .NET runtime for best results.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Do I need a key to use ArcaneX?</h3>
+            <p class="faq-answer">No. ArcaneX is fully keyless — no link‑bypassers, no daily verification, no waiting. Open it and you're ready to script.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How do I install ArcaneX?</h3>
+            <p class="faq-answer">Download the ZIP from the homepage, extract it to a folder you control and run <code>ArcaneX.exe</code>. No installer required.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Can I use ArcaneX on multiple devices?</h3>
+            <p class="faq-answer">Yes. There are no device limits — copy the folder to any Windows 10/11 PC you own and run it.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What scripts are compatible with ArcaneX?</h3>
+            <p class="faq-answer">ArcaneX supports standard Lua scripts and most community APIs. Popular utilities like Infinite Yield and Dark Dex work out of the box, and the built-in Script Hub gives quick access to a curated list.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How often is ArcaneX updated?</h3>
+            <p class="faq-answer">We update ArcaneX regularly to keep it compatible with the latest Roblox client builds and to add features. Updates are delivered automatically — you'll see a prompt the next time you launch the app.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Is using a Roblox executor allowed?</h3>
+            <p class="faq-answer">Running third‑party scripts in Roblox may conflict with Roblox's Terms of Service. ArcaneX is provided as a developer and learning tool — use it responsibly, prefer single-player or private servers for experiments, and respect the rules of any game you play.</p>
+        </div>
+    </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What is a Roblox executor?","acceptedAnswer":{"@type":"Answer","text":"A Roblox executor (or roblox injector / lua executor) is a desktop app that runs custom Lua scripts in a Roblox session. ArcaneX is one such executor with a fast attach engine and a clean editor."}},
+        {"@type":"Question","name":"What is the difference between a Roblox injector and an executor?","acceptedAnswer":{"@type":"Answer","text":"Injector attaches to the Roblox process; executor is the Lua runtime that runs scripts. Modern tools like ArcaneX bundle both."}},
+        {"@type":"Question","name":"Is ArcaneX really free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free — no subscriptions, keys or ads."}},
+        {"@type":"Question","name":"What operating systems does ArcaneX support?","acceptedAnswer":{"@type":"Answer","text":"Windows 10 and Windows 11 (64-bit)."}},
+        {"@type":"Question","name":"Do I need a key to use ArcaneX?","acceptedAnswer":{"@type":"Answer","text":"No. ArcaneX is fully keyless — no link-bypassers, no daily verification, no waiting."}},
+        {"@type":"Question","name":"How do I install ArcaneX?","acceptedAnswer":{"@type":"Answer","text":"Download the ZIP from the homepage, extract it to a folder you control and run ArcaneX.exe. No installer required."}},
+        {"@type":"Question","name":"Can I use ArcaneX on multiple devices?","acceptedAnswer":{"@type":"Answer","text":"Yes. There are no device limits — copy the folder to any Windows 10/11 PC you own and run it."}},
+        {"@type":"Question","name":"What scripts are compatible with ArcaneX?","acceptedAnswer":{"@type":"Answer","text":"ArcaneX supports standard Lua scripts and most community APIs. Popular utilities like Infinite Yield and Dark Dex work out of the box, plus a built-in Script Hub."}},
+        {"@type":"Question","name":"How often is ArcaneX updated?","acceptedAnswer":{"@type":"Answer","text":"Regularly, to stay compatible with the latest Roblox client builds. Updates are delivered automatically on launch."}},
+        {"@type":"Question","name":"Is using a Roblox executor allowed?","acceptedAnswer":{"@type":"Answer","text":"Third-party scripts may conflict with Roblox Terms of Service. ArcaneX is a developer and learning tool — use it responsibly on private servers and respect each game's rules."}}
+      ]
+    }
+    </script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ARCANEX</span>
+                    <p class="footer-text">Roblox Script Executor &amp; Lua Runtime</p>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-text">© 2026 ArcaneX. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

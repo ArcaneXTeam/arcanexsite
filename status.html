@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Status — ArcaneX Roblox Executor</title>
+    <meta name="description" content="Real-time status of ArcaneX Roblox script executor services: executor core, script hub, attach engine, download servers and update system.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ArcaneX Status">
+    <meta property="og:description" content="Live status of the ArcaneX Roblox executor services.">
+    <meta property="og:url" content="https://arcanexecutor.com/status.html">
+    <link rel="icon" href="https://arcanexecutor.com/icons8-удар-молнии-100.png" type="image/png">
+    <meta property="og:image" content="https://arcanexecutor.com/hub.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://arcanexecutor.com/hub.png">
+    <link rel="canonical" href="https://arcanexecutor.com/status.html">
+    <link rel="alternate" hreflang="en" href="https://arcanexecutor.com/status.html">
+    <link rel="alternate" hreflang="ru" href="https://arcanexecutor.com/ru/status.html">
+    <link rel="alternate" hreflang="x-default" href="https://arcanexecutor.com/status.html">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-container {
+            padding: 6rem 2rem 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .status-overview {
+            background: rgba(20, 20, 20, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .status-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .status-message {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .status-item {
+            background: rgba(20, 20, 20, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 0.9rem 1.25rem;
+            margin-bottom: 0.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-item-name {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .status-item-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            color: #00ff00;
+        }
+
+        .status-item-status.warning {
+            color: #ffaa00;
+        }
+
+        .status-item-status.error {
+            color: #ff0000;
+        }
+
+        .status-small-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: currentColor;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        .update-time {
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            margin-top: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <span class="logo-text">ARCANEX</span>
+                <span class="logo-glow"></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="download.html" class="nav-link">Download</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="questions.html" class="nav-link">Questions</a>
+                <a href="documentation.html" class="nav-link">Documentation</a>
+                <a href="status.html" class="nav-link active">Status</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="utilities.html" class="nav-link nav-link-accent">Roblox Unlocker</a>
+                <div class="lang-switcher">
+                    <button class="lang-button" type="button" aria-haspopup="true" aria-expanded="false">Language</button>
+                    <div class="lang-menu" role="menu">
+                        <a href="status.html" class="lang-option active" hreflang="en" role="menuitem">English<span class="lang-option-code">EN</span></a>
+                        <a href="ru/status.html" class="lang-option" hreflang="ru" role="menuitem">Русский<span class="lang-option-code">RU</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <h1 class="page-title">
+            <span class="gradient-text">Service Status</span>
+        </h1>
+        <p class="page-subtitle">Real-time status of ArcaneX services</p>
+
+        <div class="status-overview">
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span>All Systems Operational</span>
+            </div>
+            <p class="status-message">ArcaneX is running smoothly with no known issues</p>
+        </div>
+
+        <div class="status-item">
+            <span class="status-item-name">Executor Core</span>
+            <div class="status-item-status">
+                <span class="status-small-dot"></span>
+                <span>Operational</span>
+            </div>
+        </div>
+
+        <div class="status-item">
+            <span class="status-item-name">Script Hub</span>
+            <div class="status-item-status">
+                <span class="status-small-dot"></span>
+                <span>Operational</span>
+            </div>
+        </div>
+
+        <div class="status-item">
+            <span class="status-item-name">Auto-Attach System</span>
+            <div class="status-item-status">
+                <span class="status-small-dot"></span>
+                <span>Operational</span>
+            </div>
+        </div>
+
+        <div class="status-item">
+            <span class="status-item-name">Download Servers</span>
+            <div class="status-item-status">
+                <span class="status-small-dot"></span>
+                <span>Operational</span>
+            </div>
+        </div>
+
+        <div class="status-item">
+            <span class="status-item-name">API Services</span>
+            <div class="status-item-status">
+                <span class="status-small-dot"></span>
+                <span>Operational</span>
+            </div>
+        </div>
+
+        <div class="status-item">
+            <span class="status-item-name">Update System</span>
+            <div class="status-item-status">
+                <span class="status-small-dot"></span>
+                <span>Operational</span>
+            </div>
+        </div>
+
+        <p class="update-time">Last updated: Just now • Auto-refreshes every 60 seconds</p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ARCANEX</span>
+                    <p class="footer-text">Roblox Script Executor &amp; Lua Runtime</p>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-text">© 2026 ArcaneX. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
