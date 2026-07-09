@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Strip tracking tags so Yandex doesn't index duplicate URLs
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&fbclid&_openstat&ref
+
 Sitemap: https://arcanexecutor.com/sitemap.xml
