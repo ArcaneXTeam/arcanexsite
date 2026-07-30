@@ -364,6 +364,7 @@ h1, h2, h3, .logo-text, .footer-logo, .hero-title, .section-title,
     transition: all 0.3s ease;
     position: relative;
     padding: 0.5rem 0;
+    white-space: nowrap;
 }
 
 .nav-link::after {
@@ -1096,6 +1097,7 @@ main {
     padding: 0.45rem 1rem;
     border-radius: 50px;
     font-weight: 700;
+    white-space: nowrap;
     box-shadow: 0 0 0 0 rgba(255,255,255,0.5);
     animation: live-pulse 2.4s infinite;
 }
@@ -1771,4 +1773,158 @@ textarea:focus-visible,
 @media (max-width: 768px) {
     .info-section { padding: 4rem 1.25rem; }
     .step { padding: 1rem 1.1rem; gap: 0.9rem; }
+}
+
+/* ============================================================
+   SOLO DIRECT-DOWNLOAD HERO CARD
+   ============================================================ */
+.dl-page--solo .dl-head { margin-bottom: 2.5rem; }
+
+.dl-hero-wrap {
+    max-width: 520px;
+    margin: 0 auto 3rem;
+}
+
+.dl-hero-card {
+    position: relative;
+    background: linear-gradient(145deg, var(--surface-raised), var(--bg-secondary));
+    border: 1px solid var(--border-strong);
+    border-radius: 24px;
+    padding: 2.8rem 2.8rem 2.4rem;
+    overflow: hidden;
+    text-align: center;
+    animation: dlIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.08s both;
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.dl-hero-card:hover {
+    border-color: var(--accent-steel);
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(139, 148, 167, 0.18);
+}
+
+/* Radial glow behind the icon */
+.dl-hero-glow {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 148, 167, 0.13) 0%, transparent 65%);
+    pointer-events: none;
+    animation: dlDirectPulse 3s ease-in-out infinite;
+}
+
+/* Icon + label row */
+.dl-hero-top {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.dl-hero-icon {
+    flex-shrink: 0;
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: rgba(139, 148, 167, 0.09);
+    border: 1px solid var(--border-strong);
+    color: var(--accent-secondary);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.dl-hero-card:hover .dl-hero-icon {
+    transform: translateY(-3px) scale(1.06);
+    background: rgba(139, 148, 167, 0.18);
+}
+
+.dl-hero-info { text-align: left; }
+.dl-hero-label {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+.dl-hero-meta {
+    color: var(--text-tertiary);
+    font-size: 0.86rem;
+    margin-top: 0.3rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+}
+
+.dl-hero-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 0 0 2rem;
+}
+
+/* Main CTA button */
+.dl-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    width: 100%;
+    background: linear-gradient(180deg, #ffffff 0%, #dfe2e8 100%);
+    color: #0a0c10;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 1.05rem 2rem;
+    border-radius: 12px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), var(--shadow-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    margin-bottom: 1.8rem;
+    position: relative;
+    overflow: hidden;
+}
+.dl-hero-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.dl-hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), var(--shadow-lg), 0 0 0 1px rgba(139,148,167,0.45);
+    background: linear-gradient(180deg, #ffffff 0%, #eceef2 100%);
+}
+.dl-hero-btn:hover::before { opacity: 1; }
+.dl-hero-btn svg { flex-shrink: 0; position: relative; z-index: 1; }
+.dl-hero-btn span { position: relative; z-index: 1; }
+.dl-hero-arrow { margin-left: auto; transition: transform 0.2s ease; }
+.dl-hero-btn:hover .dl-hero-arrow { transform: translateX(4px); }
+
+/* Badge row */
+.dl-hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    justify-content: center;
+}
+.dl-hero-badges span {
+    font-family: var(--font-mono);
+    font-size: 0.73rem;
+    color: var(--text-tertiary);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 0.28rem 0.75rem;
+    letter-spacing: 0.03em;
+}
+
+@media (max-width: 600px) {
+    .dl-hero-card { padding: 2rem 1.5rem 1.8rem; border-radius: 18px; }
+    .dl-hero-top { flex-direction: column; gap: 0.8rem; }
+    .dl-hero-info { text-align: center; }
+    .dl-hero-wrap { max-width: 100%; }
 }
